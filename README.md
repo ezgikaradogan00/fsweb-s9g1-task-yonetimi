@@ -20,7 +20,7 @@ Projede, `Yapılacaklar` listesine yeni görev eklenmesini sağlayan ve görevle
  
 - `App.js` içerisinde comment içerisine alınmış olan `TaskForm` componentını aktif hale getirin ve nasıl çalıştığını inceleyin.
 - react-hook-form kütüphanesinin dokümantasyon sayfasını ve özellikle [form alanı oluşturma aracını](https://react-hook-form.com/form-builder/) inceleyin ve o aracı kullanarak `TaskForm` componentını yeniden oluştururken kullanabileceğiniz kodlar üretmeye çalışın.
-- [react-hook-form](https://www.npmjs.com/package/react-hook-form) kütüphanesini projeye ekleyin.
+- [react-hook-form](https://www.npmjs.com/packagnpme/react-hook-form) kütüphanesini projeye ekleyin.
 - Yeni görev ekleme formunu `TaskHookForm` dosyası içerisinde react-hook-form kütüphanesini kullanarak oluşturun.
 - `TaskForm` componentı içerisinde yer alan Yup şemasına bakarak, tüm form validation kriterlerini ve hata mesajlarını `TaskHookForm` içerisinde kullanın.
 - `Yapılacak görevler` listesinde yer alan bir görevin `status` değerini, "tamamlandı" butonuna basıldığında "yapıldı" olarak değiştirin.

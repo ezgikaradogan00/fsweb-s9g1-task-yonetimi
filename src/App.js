@@ -5,9 +5,12 @@ import TaskForm from "./TaskForm";
 import TaskHookForm from "./TaskHookForm";
 import PeopleForm from "./PeopleForm";
 import { initialTasks, initialTeam } from "./data";
+import { ToastContainer, toast } from "react-toastify";
+
 
 
 function App() {
+  const notify = (text) =>toast(" pist " + text );
   const [tasks, setTasks] = useState(initialTasks);
   const [team, setTeam] = useState(initialTeam);
 
@@ -20,7 +23,13 @@ function App() {
   }
 
   function handleComplete(id) {
-    console.log("tamamlama fonksiyonunu buraya yazın")
+    console.log("tamamlama fonksiyonunu buraya yazın", id);
+    const tasksClone = [...tasks];
+    const updateTask = tasksClone.find((t) => t.id ===id);
+    updateTask.status ='yapıldı';
+    console.log('updateTask', updateTask);
+    notify(updateTask.title +  " tamamlandı");
+    setTasks(tasksClone);
   }
 
   return (
@@ -60,7 +69,22 @@ function App() {
         </div>
       </div>
 
+      <ToastContainer
+      position="top-right"
+      autoClose={1000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="dark"
+      />
+
     </div>
+    
+    
   );
 }
 
